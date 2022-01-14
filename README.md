@@ -54,4 +54,7 @@ We want you to have well over 200 commits by graduation, so commit early and oft
 - https://carvasquez206.github.io/Nosql-FitnessTracker/
 
 ## The URL to the GitHub repository
-- 
+- https://github.com/carvasquez206/Nosql-FitnessTracker
+
+## Heroku App
+-
