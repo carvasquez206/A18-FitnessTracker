@@ -29,4 +29,4 @@ The user should be able to:
 - https://github.com/carvasquez206/Nosql-FitnessTracker
 
 ## Heroku
--
+- https://fitness2tracker.herokuapp.com/
