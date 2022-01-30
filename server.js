@@ -20,8 +20,8 @@ mongoose.connect(process.env.MONGODB_URI || "Add mongodb here", {
 });
 
 // Routes
-app.use(require("./routes/api-routes.js"));
 app.use(require("./routes/html-routes.js"));
+app.use(require("./routes/api-routes.js"));
 
 // Listen to request 
 app.listen(PORT, () => {
