@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Mngoose database 
-mongoose.connect(process.env.MONGODB_URI || "Add mongodb here", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
@@ -20,8 +20,8 @@ mongoose.connect(process.env.MONGODB_URI || "Add mongodb here", {
 });
 
 // Routes
-app.use(require("./routes/html-routes.js"));
-app.use(require("./routes/api-routes.js"));
+app.use(require("./routes/html-routes"));
+app.use(require("./routes/api-routes"));
 
 // Listen to request 
 app.listen(PORT, () => {
