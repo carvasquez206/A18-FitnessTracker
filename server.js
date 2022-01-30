@@ -1,8 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const logger = require("logger");
-//make sure PORT is all caps
-const PORT = process.env.PORT || 3001
+
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -11,19 +10,18 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-// Mngoose database 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://carvasquez:KingKong123@cluster0.tprv5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false
+
 });
 
-// Routes
+// routes
 app.use(require("./routes/html-routes"));
-app.use(require("./routes/api-routes"));
+app.use(require("./routes/api-routes.js"));
 
-// Listen to request 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
